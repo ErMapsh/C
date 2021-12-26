@@ -13,3 +13,8 @@
 3. assembly- acctually is a low level language that complier coverted. in this convertd low level langauge to machine level langauge. means converted to binary value that can computer understand.
 4. Linker- linker is get a all .O files and combine them and create a execute a file like ie. structure.exe
 
+## tokens 
+- our C program are made by lot of token, tokens combine together.
+- every statement termination is done by ;(semicolon)
+- C have 32 general purpose ![keyword](https://docs.microsoft.com/en-us/cpp/c-language/c-keywords?view=msvc-170) and they are reserverd.
+- our C program is done by keyword, identifier, constant, string literal, symbol
