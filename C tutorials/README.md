@@ -16,5 +16,5 @@
 ## tokens 
 - our C program are made by lot of token, tokens combine together.
 - every statement termination is done by ;(semicolon)
-- C have 32 general purpose ![keyword](https://docs.microsoft.com/en-us/cpp/c-language/c-keywords?view=msvc-170) and they are reserverd.
+- C have 32 general purpose [keyword](https://docs.microsoft.com/en-us/cpp/c-language/c-keywords?view=msvc-170) and they are reserverd.
 - our C program is done by keyword, identifier, constant, string literal, symbol
