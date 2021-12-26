@@ -30,5 +30,5 @@
 - [Data Types in C ](https://www.javatpoint.com/data-types-in-c)
 - [Data Types and Size](https://drive.google.com/file/d/12Qd4LsTvjHbqOilQVjUWk7J1-oPOKyjL/view?usp=sharing)
 
-## operator in C:
+## Operator in C:
 - ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Operators-In-C.png)
