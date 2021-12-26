@@ -18,3 +18,14 @@
 - every statement termination is done by ;(semicolon)
 - C have 32 general purpose [keyword](https://docs.microsoft.com/en-us/cpp/c-language/c-keywords?view=msvc-170) and they are reserverd.
 - our C program is done by keyword, identifier, constant, string literal, symbol
+
+## Variable: Rules for defining a var in C:
+- variable is nothing but a name given to a memory location in ram
+1. A variable can have alphabets, digits, and underscore.
+2. A variable name can start with the alphabet, and underscore only. It can't start with a digit.
+3. No whitespace is allowed within the variable name.
+4. A variable name must not be any reserved word or keyword, e.g. int, goto , etc
+
+## Data Types in C:
+- [Data Types in C ](https://www.javatpoint.com/data-types-in-c)
+- ![Data Types]()
