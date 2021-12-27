@@ -32,3 +32,19 @@
 
 ## Operator in C:
 - ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Operators-In-C.png)
+
+## C Format Specifiers and Escape Sequences:
+- [YoutubeVideo](https://www.youtube.com/watch?v=XETsCR2bXJI&list=PLu0W_9lII9aiXlHcLx-mDH1Qul38wD3aR&index=9)
+- i.e printf("value of a is %6.3f and value of b is %d\n", a, b);
+1. here %d is for int.
+2. %f is for float. 
+3. %c is for character.
+4. %l is for long. 
+5. %lf is for double.
+6.  %Lf is for Long Double.
+- we can do specific format in float, %6.3f here format is float and total no is 6 in float value and want 3 decimal value, working left to right. if we use -ve value for total character is return from right to left i.e %-16.3f.
+
+
+## Constant In C:
+- we can define constant using two way 1.constant keyword 2. #define preprocessor
+
