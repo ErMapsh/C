@@ -21,6 +21,7 @@ int factorial(int number)
 	else
 	{
 		return number*factorial(number-1);	//Recursion of Function
+		// here actually happen a recursion until 1-1
 	}
 }
 
