@@ -24,7 +24,9 @@ of stack(-1), means stack is empty then it is not possible to delete more elemen
 #define Max 20
 
 int stack[Max], tos;
-display()
+int push();
+int pop();
+int display();
 
 int main()
 {
