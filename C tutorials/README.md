@@ -62,38 +62,3 @@
 1. ie. const int a= 3;
 2. #define a 3
 
-## Pointers:
-
-Before discussing about pointers let me tell you when we define and initialize a variable at that time we come to know about these things :
-
-- Memory block i.e. variable get some space in RAM and we can think of that as a block.
-- Name of memory block or Variable’s name
-- Content of that block i.e. value in that variable
-- Address of memory block i.e. unique address which allows us to access that variable.
-
-We can print address of any variable by using printf function as :
-
-```C
-printf(“%d”,&variable_name);
-```
-
-Pointer:
-
-1. Pointer is a variable that contains address of another variable. It means it is a variable but this variable contains address or memory address of any other variable.
-2. It can be of type int, char, array, function, or any other pointer.
-3. Its size depends on architecture.
-4. Pointers in C Language can be declared using *(asterisk symbol).
-
-````C
-#include<stdio.h>
-
-int main()
-{
-	int x=5;
-	int *a =&x;
-
-	printf("%d\n",&x );
-	printf("%d",a );
-	return 0;
-}
-````
