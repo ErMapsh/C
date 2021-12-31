@@ -1,20 +1,24 @@
-#include <stdio.h>
+/*
+1
+23
+456
+78910
+*/
 
-void main()
-{
-    /*
-    1
-    2 3
-    4 5 6
-    7 8 9 10
-    11 12 13 14 15
-    */
-    int n, sum = 0, i = 1;
-    printf("Enter Number:");
-    scanf("%d", &n);
-
-    for (int i = 1; i <= n; i++)
+#include<stdio.h>
+int main()
+{ 
+  int i,j,k,n;
+  int init=1;
+  printf("Enter No of Rows:");
+  scanf("%d", &n);
+  for(i=1;i<n;i++)
+  {
+    for(j=1;j<=i;j++)
     {
-        printf("\n");
+      printf("%d ",init++);
     }
+    printf("\n");
+  }
+  return 0;
 }

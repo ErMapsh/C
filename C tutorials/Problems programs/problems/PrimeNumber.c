@@ -1,30 +1,32 @@
 #include <stdio.h>
-void prime(int x);
 
 int main()
 {
-    int num;
-    printf("Enter Your Number: ");
-    scanf("%d", &num);
-    prime(num); // call the funtions
-    return 0;
-}
+    int n, i, flag = 0;
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
 
-void prime(int n)
-{
-    int i = 2;
-    while (i < n)
+    for (i = 2; i <= n / 2; ++i)
     {
+        // condition for non-prime
         if (n % i == 0)
         {
-            printf("Your Number is prime\n");
+            flag = 1;
             break;
         }
-        i++;
     }
-    if (n==i)
+
+    if (n == 1)
     {
-        printf("No is prime");
+        printf("1 is neither prime nor composite.");
     }
-    
+    else
+    {
+        if (flag == 0)
+            printf("%d is a prime number.", n);
+        else
+            printf("%d is not a prime number.", n);
+    }
+
+    return 0;
 }
