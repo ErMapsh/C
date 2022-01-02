@@ -11,19 +11,10 @@ A termination condition is imposed on such functions to stop them executing copi
 Any problem which can be solved recursively can also be solved iteratively.
 */
 
-#include<stdio.h>
-int factorial(int number)
-{
-	if (number ==1 || number == 0)
-	{
-		return 1;
-	}
-	else
-	{
-		return number*factorial(number-1);	//Recursion of Function
-		// here actually happen a recursion until 1-1
-	}
-}
+
+// facorial serise 32!
+#include <stdio.h>
+int factorial();
 
 int main()
 {
@@ -33,4 +24,17 @@ int main()
 	printf("\nThe factorial of %d is %d", num, factorial(num));
 
 	return 0;
+}
+
+int factorial(int number)
+{
+	if (number == 1 || number == 0)
+	{
+		return 1;
+	}
+	else
+	{
+		return number * factorial(number - 1); // Recursion of Function
+		// here actually happen a recursion until 1-1
+	}
 }
