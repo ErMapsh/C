@@ -6,6 +6,23 @@
 - [Config of C ](https://www.youtube.com/watch?v=0HD0pqVtsmw&list=LL&index=6&t=620s)
 - building a exe file (gcc file.c -o "exe filename")[]
 
+
+## Snippets for C:
+```` Js
+"format": {
+    "prefix": "main2",
+    "body": [
+      "#include<stdio.h>",
+      "int main()",
+      "{",
+      "\t$1",
+      "\treturn 0;",
+      "}"
+    ],
+    "description": "to print format"
+  }
+````
+
 ## Basic structure of C program:
 
 - Program are divided into different part like Pre-Processor, main function, variable declaration and so on.

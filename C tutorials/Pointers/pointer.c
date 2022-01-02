@@ -5,7 +5,7 @@ int main()
     printf("Pointer Basics\n"); 
     // Defining int var and poiner var
     int a = 76;
-    int *ptr1 = &a;// here &x is memory location of x var in ram. it should be in hexadecimal.
+    int *ptr1 = &a;// here &x is memory location of a var in ram. it should be in hexadecimal.
     int *ptr2 = NULL;// this is null pointer, dont store any address of another var.
 
     // Printing Address of  var
