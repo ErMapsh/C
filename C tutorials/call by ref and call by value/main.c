@@ -24,5 +24,8 @@ int main()
 void addSub(int *x, int *y)
 {
     // printf("%d and %d", *x, *y);
-    printf("after this, your a become is %d and b become is %d", *x + *y, *x - *y);
+    int add = *x + *y;
+    int sub = *x - *y;
+    *x = add, *y = sub;// here value of a become change
+    printf("after this, your a become is %d and b become is %d", *x, *y);
 }   
