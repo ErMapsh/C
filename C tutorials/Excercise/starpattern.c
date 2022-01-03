@@ -14,22 +14,51 @@ Then print the pattern accordingly
 
 */
 #include <stdio.h>
+
+void Triangularstarpattern(int n);
+void Reversedtriangularstarpattern(int n);
+
+
 int main()
 {
-    int n;
+    int n, choice;
     printf("Enter No: ");
     scanf("%d", &n);
 
-    for (int i = 0; i < n; i++)
+    printf("\n1.Triangular star pattern\n2.Reversed triangular star pattern\nWhat u want: ");
+    scanf("%d", &choice);
+
+    switch (choice)
     {
-        for (int j = 0; j < i; j++)
+    case 1:
+       Triangularstarpattern(n);
+        break;
+    case 2:
+        Reversedtriangularstarpattern(n);
+        break;
+    default:
+        printf("Enter Correct Choice!!!");
+        break;
+    }
+    
+
+    return 0;
+}
+
+
+void Triangularstarpattern(int n){
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
         {
             printf("%s", "*");
         }
         printf("\n");
     }
+}
 
-    printf("\n");
+
+void Reversedtriangularstarpattern(int n){
 
     for (int i = 0; i < n; i++)
     {
@@ -39,6 +68,4 @@ int main()
         }
         printf("\n");
     }
-
-    return 0;
 }
