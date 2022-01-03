@@ -6,9 +6,9 @@
 - [Config of C ](https://www.youtube.com/watch?v=0HD0pqVtsmw&list=LL&index=6&t=620s)
 - building a exe file (gcc file.c -o "exe filename")[]
 
-
 ## Snippets for C:
-```` Js
+
+```Js
 "format": {
     "prefix": "main2",
     "body": [
@@ -21,7 +21,7 @@
     ],
     "description": "to print format"
   }
-````
+```
 
 ## Basic structure of C program:
 
