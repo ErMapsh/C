@@ -22,6 +22,7 @@ int main()
     // Reversed string
     printf("The reversed string s1 is: ");
     puts(strrev(s1));
+    printf("\n");
     printf("The reversed string s2 is: ");
     puts(strrev(s2));
 
