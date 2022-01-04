@@ -28,9 +28,6 @@ int strRev(int *arg, int size)
     return *arg;
 }
 
-
-
-
 // Without using function
 /*
 #include <stdio.h>
