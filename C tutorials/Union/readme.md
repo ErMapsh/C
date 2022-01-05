@@ -13,7 +13,7 @@
 - Syntax is very similar to that of structure.
 
 ```c
-   union student{
+   typedef union student{
        int id[34];
        float mark[34];
        char c;

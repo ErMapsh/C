@@ -18,7 +18,7 @@ int main()
     puts(strcat(s1, s2));
 
     printf("\n");
-    
+
     // Reversed string
     printf("The reversed string s1 is: ");
     puts(strrev(s1));
@@ -29,11 +29,10 @@ int main()
     printf("\n");
 
     // copy string
-    strcpy(s3 ,strcat(s1, s2));
+    strcpy(s3, strcat(s1, s2));
     puts(s3);
-    
 
-    // allow user to enter two strings and then concatenate them by saying that 
+    // allow user to enter two strings and then concatenate them by saying that
     // str1 is a friend of str2
     return 0;
 }
