@@ -39,6 +39,7 @@ int main()
         printf("Enter no of characters in your eId: ");
         scanf("%d", &charn);
         printf("Your eId have %d lengthy\n", charn);
+        getchar();
 
         ptr = (int *)calloc(charn, sizeof(charn));
 
@@ -46,6 +47,7 @@ int main()
         {
             printf("Enter Your eId character No %d:", j + 1);
             scanf("%s", ptr + j);
+            getchar();
         }
 
         printf("Enter eid of Employe: ");
