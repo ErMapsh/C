@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
     //----Bitwise Operator----
     printf("a & b: %d\n", a&b); // 10&101
     printf("a | b: %d\n", a|b); // 10|101
-    printf("a ^ b: %d\n\n", a^b); // 10^101 //ExclusiveOR- any one value shou;b be false and one value should be true, then 1. if not then value become 0.
+    printf("a ^ b: %d\n\n", a^b); // 10^101 //ExclusiveOR- any one value should be false and one value should be true, then 1. if not then value become 0.
 
     //---Assignment Operator---
     printf("a+=1: %d\n", a+=1 );
