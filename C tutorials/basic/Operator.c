@@ -23,8 +23,8 @@ int main(int argc, char const *argv[])
 
     //---Logic Operator---
     printf("a && b: %d\n", a && b);// if both operand become non-zero then condition true.
-    printf("a || b: %d\n", a || b);// if any of of these two operand are non-zero, then condition become true
-    printf("!(a && b): %d\n\n", !(a && b));// reverse 
+    printf("a || b: %d\n", a || b);// if any of  these two operand are non-zero, then condition become true
+    printf("!(a && b): %d\n\n", !(a && b));// reverse (!true = false)
 
     //----Bitwise Operator----
     printf("a & b: %d\n", a&b); // 10&101

@@ -26,7 +26,7 @@ Data in an array is stored in contiguous memory locations in RAM.
 Each element of an array is of same size i.e. their data types are same so memory consumed by each is also same.
 Any element of the array with given index can be accessed very quickly by using its address which can be calculated using the base address and the index.
 
-Index No. – It is the special type of no. which allows us to access variables of Arrays i.e. index no. provides a method to access each element of an array in a program.z
+Index No. – It is the special type of no. which allows us to access variables of Arrays i.e. index no. provides a method to access each element of an array in a program.
 
 
 
@@ -44,7 +44,7 @@ int main()
 
 	// ---lenght of array---
 	int length = sizeof(marks) / 4; // In each int element having a 4 bytes, we need number of item in array so its return 10 beacause int having 4 bytes size and 4*10 blocks in array is 40
-	// printf("%d",length);
+	// printf("%d\n",length);//10
 
 	printf("Enter marks of 10 students:\n\n");
 	for (int i = 0; i <= length - 1; i++)

@@ -2,6 +2,7 @@
 
 int main(int argc, char const *argv[])
 {
-    printf("%lu", sizeof(int));
+    printf("%lu\n", sizeof(int));
+    printf("%d\n", sizeof(int));
     return 0;
 }
