@@ -17,8 +17,7 @@ int display(int arr[], int U_size)
 int Deletion(int arr[], int index, int size)
 {
     /*
-        while deletion of element, we cant directly remove element but we can using index of that element, we can also overwrite element by using index, so basically here we dont delete element, we just overwrite element of next element using below algo.
-
+        while deletion of element, we cant directly remove element but we can using index of that element, we can also overwrite element by using index, so basically here we dont delete element, we just overwrite element using next element.
     */
     for (int i = index; i < size - 1; i++)
     {
