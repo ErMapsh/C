@@ -79,34 +79,11 @@ int display(struct stack *ptr)
         printf("\n\n");
     }
 }
-
-int peedValue(struct stack *ptr, int index)
-{
-    if (index == -1)
-    {
-        printf("Stack is empty...\n");
-        return 0;
-    }
-    else
-    {
-        if (ptr->size - 1 >= index)
-        {
-
-            if (index <= ptr->top)
-            {
-                printf("Element is %d at index no %d\n\n", ptr->arr[index], index);
-                return 1;
-            }
-            else
-            {
-                printf("invalid value or not defined..\n\n");
-            }
-        }
-        else
-        {
-            printf("index is out of size..\n\n");
-        }
-    }
+int StackTop(struct stack *ptr){
+    return ptr->arr[ptr->top];
+}
+int StackBotton(struct stack *ptr){
+    return ptr->arr[0];
 }
 int main()
 {
@@ -122,9 +99,8 @@ int main()
     push(s, 101);
     display(s);
 
-    // peek operation in here
-    peedValue(s, 4);
-    peedValue(s, 0);
-    peedValue(s, 15);
+    printf("Top most element of stack is %d\n", StackTop(s));
+    printf("Bottom element of stack is %d\n", StackBotton(s));
+  
     return 0;
 }
