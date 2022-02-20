@@ -116,7 +116,7 @@ int main()
     push(s, 34);
     push(s, 3);
     push(s, 1);
-    push(s, 6);s
+    push(s, 6);
     push(s, 101);
     display(s);
 
