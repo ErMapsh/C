@@ -76,11 +76,11 @@ struct Node *Pop(struct Node *top)
     }
 }
 
-struct Node *Display(struct Node *top)
+void *Display(struct Node *top)
 {
     if (isEmpty(top))
     {
-        printf("Stack is Empty\n");
+        printf("Stack is Empty\n\n");
     }
     else
     {
@@ -91,21 +91,68 @@ struct Node *Display(struct Node *top)
             ptr = ptr->next;
         }
         printf("\n");
-        return top;
     }
 }
 
+void ValueByIndex(struct Node *top)
+{
+    if (isEmpty(top))
+    {
+        printf("Stack is Empty\n\n");
+    }
+    else
+    {
+        struct Node *ptr = top;
+        int i = 1;
+        int position;
+        printf("Enter Position: ");
+        scanf("%d", &position);
+        while (i != position)
+        {
+            ptr = ptr->next;
+            i++;
+        }
+        printf("Element at position %d is %d..\n", position, ptr->data);
+    }
+}
+void StackTop(struct Node *top)
+{
+    if (isEmpty(top))
+    {
+        printf("Stack is empty, push element.\n\n");
+    }
+    else
+    {
+        printf("Top Most Element is %d\n", top->data);
+    }
+}
+void StackBottom(struct Node *top)
+{
+    if (isEmpty(top))
+    {
+        printf("Stack is empty, push element.\n\n");
+    }
+    else
+    {
+        struct Node *ptr = top;
+        while (ptr->next != NULL)
+        {
+            ptr = ptr->next;
+        }
+        printf("Bottom Element is %d\n", ptr->data);
+    }
+}
 int main(int argc, char const *argv[])
 {
     /*
         when we implementing a stack using linked list that time is easy to push/pop element at start. so thats why we pop/push node from beginning/head, its doen in O(1). beacause we choose last node then we travles all node that are between.so we push last element in stack.
     */
 
-    int choice, StackSize = 3;
+    int choice, StackSize = 5;
     struct Node *top = NULL;
     while (1)
     {
-        printf("1.Push\n2.Pop\n3.Display\n4.Exit\n");
+        printf("\n1.Push\n2.Pop\n3.Display\n4.Value By Index\n5.Top Element\n6.Bottom Element\n7.Exit\n");
         printf("Enter Your Choice: ");
         scanf("%d", &choice);
         switch (choice)
@@ -117,9 +164,18 @@ int main(int argc, char const *argv[])
             top = Pop(top);
             break;
         case 3:
-            top = Display(top);
+            Display(top);
             break;
         case 4:
+            ValueByIndex(top);
+            break;
+        case 5:
+            StackTop(top);
+            break;
+        case 6:
+            StackBottom(top);
+            break;
+        case 7:
             exit(1);
             break;
         default:
