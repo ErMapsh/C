@@ -94,7 +94,7 @@ void *Display(struct Node *top)
     }
 }
 
-void ValueByIndex(struct Node *top)
+void ValueByIndex(struct Node *top, int size)
 {
     if (isEmpty(top))
     {
@@ -107,12 +107,17 @@ void ValueByIndex(struct Node *top)
         int position;
         printf("Enter Position: ");
         scanf("%d", &position);
-        while (i != position)
+        if (position <= size)
         {
-            ptr = ptr->next;
-            i++;
+            while (i != position)
+            {
+                ptr = ptr->next;
+                i++;
+            }
+            printf("Element at position %d is %d..\n", position, ptr->data);
+        }else{
+            printf("Position greater than Stack size..\n");
         }
-        printf("Element at position %d is %d..\n", position, ptr->data);
     }
 }
 void StackTop(struct Node *top)
@@ -167,7 +172,7 @@ int main(int argc, char const *argv[])
             Display(top);
             break;
         case 4:
-            ValueByIndex(top);
+            ValueByIndex(top, StackSize);
             break;
         case 5:
             StackTop(top);
