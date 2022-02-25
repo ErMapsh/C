@@ -61,6 +61,30 @@ int pop(struct stack *ptr)
     return 1;
 }
 
+char stackTop(struct stack *ptr)
+{
+    return ptr->arr[ptr->top];
+}
+
+int MatchChar(char a, char b)
+{
+    if (a == '{' && b == '}')
+    {
+        return 1;
+    }
+    else if (a == '[' && b == ']')
+    {
+        return 1;
+    }
+    else if (a == '(' && b == ')')
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
 int ParenthesisMatch(char *exp)
 {
     // create and initialise a stack
@@ -72,17 +96,28 @@ int ParenthesisMatch(char *exp)
 
     for (int i = 0; exp[i] != '\0'; i++)
     {
-        if (exp[i] == '(')
+        if (exp[i] == '(' || exp[i] == '[' || exp[i] == '{')
         {
             push(sp, exp[i]);
         }
-        else if (exp[i] == ')')
+        else if (exp[i] == ')' || exp[i] == ']' || exp[i] == '}')
         {
             if (isEmpty(sp))
             {
                 return 0;
             }
-            pop(sp);
+            else
+            {
+                char top = stackTop(sp);
+                if (MatchChar(top, exp[i]))
+                {
+                    pop(sp);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
         }
     }
 
@@ -101,7 +136,7 @@ int ParenthesisMatch(char *exp)
 int main()
 {
     char *Expression = (char *)malloc(100 * sizeof(char));
-    Expression = "8*(9) + (9*43)";
+    Expression = "[4-6]((8){(9-8)})";
     // printf("Enter Your Expression: ");
     // gets(Expression);
 
