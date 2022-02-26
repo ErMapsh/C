@@ -108,8 +108,8 @@ int ParenthesisMatch(char *exp)
             }
             else
             {
-                char top = stackTop(sp);
-                if (MatchChar(top, exp[i]))
+                char topChar = stackTop(sp);
+                if (MatchChar(topChar, exp[i]))
                 {
                     pop(sp);
                 }
