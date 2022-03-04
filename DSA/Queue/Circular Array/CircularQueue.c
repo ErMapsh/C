@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Queue
+struct CircularQueue
 {
     int size;
-    int rear;
     int front;
+    int rear;
     int *arr;
 };
 
-int isFull(struct Queue *q)
+int isFull(struct CircularQueue *q)
 {
-    if (q->rear == q->size - 1)
+    if ((q->rear + 1) % q->size == q->front)
     {
         return 1;
     }
@@ -21,9 +21,9 @@ int isFull(struct Queue *q)
     }
 }
 
-int isEmpty(struct Queue *q)
+int isEmpty(struct CircularQueue *q)
 {
-    if (q->front == q->rear)
+    if (q->rear == q->front )
     {
         return 1;
     }
@@ -33,42 +33,37 @@ int isEmpty(struct Queue *q)
     }
 }
 
-int Add(struct Queue *q)
+void enqueue(struct CircularQueue *q)
 {
     if (isFull(q))
     {
-        printf("Queue is Full..\n");
-        return 0;
+        printf("QUEUE IS OVERFLOW\n");
     }
     else
     {
         int data;
-        printf("Enter Your No: ");
+        printf("Enter Your Number: ");
         scanf("%d", &data);
+
         q->arr[q->rear] = data;
-        q->rear++;
-        return 1;
+        q->rear = (q->rear + 1) % q->size;
     }
 }
 
-int Delete(struct Queue *q)
+void dequeue(struct CircularQueue *q)
 {
     if (isEmpty(q))
     {
-        printf("Queue is Empty..\n");
-        return 0;
+        printf("QUEUE IS UNDERFLOW\n");
     }
     else
     {
-        for (int i = q->front; i < q->rear; i++)
-        {
-            q->arr[i] = q->arr[i + 1];
-        }
-        q->rear--;
+        printf("%d value delected..\n", q->arr[q->front]);
+        q->front = (q->front + 1) % q->size;
     }
 }
 
-void Transversal(struct Queue *q)
+void Transversal(struct CircularQueue *q)
 {
     if (isEmpty(q))
     {
@@ -83,14 +78,14 @@ void Transversal(struct Queue *q)
         printf("\n");
     }
 }
+
 int main(int argc, char const *argv[])
 {
-
+    struct CircularQueue *CQ = (struct CircularQueue *)malloc(sizeof(struct CircularQueue));
+    CQ->size = 4;
+    CQ->front = CQ->rear = 0;
+    CQ->arr = (int *)malloc(CQ->size * sizeof(int));
     int choice;
-    struct Queue *q = (struct Queue *)malloc(sizeof(struct Queue));
-    q->front = q->rear = 0;
-    q->size = 5;
-    q->arr = (int *)malloc(q->size * sizeof(int));
 
     while (1)
     {
@@ -101,13 +96,13 @@ int main(int argc, char const *argv[])
         switch (choice)
         {
         case 1:
-            Add(q);
+            enqueue(CQ);
             break;
         case 2:
-            Delete(q);
+            dequeue(CQ);
             break;
         case 3:
-            Transversal(q);
+            Transversal(CQ);
             break;
         case 4:
             exit(1);

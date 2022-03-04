@@ -5,6 +5,8 @@
         "initializer_list": "c",
         "utility": "c",
         "string": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "deque": "c",
+        "vector": "c"
     }
 }
