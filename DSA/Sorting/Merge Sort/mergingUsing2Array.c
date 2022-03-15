@@ -15,7 +15,7 @@ void MergeSort(int *a, int *b, int *c, int m, int n)
 
     while (i < m && j < n)
     {
-        if (a[i] <= b[j])
+        if (a[i] < b[j])
         {
             c[k] = a[i];
             k++;
@@ -44,6 +44,7 @@ void MergeSort(int *a, int *b, int *c, int m, int n)
 
     printArray(c, m + n);
 }
+
 int main(int argc, char const *argv[])
 {
     int a[4] = {2, 11, 21, 42};

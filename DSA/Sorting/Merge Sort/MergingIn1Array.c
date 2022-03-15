@@ -20,65 +20,64 @@ int GiveMeMid(int *arr, int n)
     }
     return -1;
 }
-void MergeSort(int *a, int *b, int high)
+
+void Merge(int *a, int high)
 {
-    int i = 0, k = 0;
+    int i = 0, k = 0, j;
     int mid = GiveMeMid(a, high);
-    // printf("mid is %d\n", mid);
-    int j = mid + 1;
+    j = mid + 1;
+    int b[100];
 
     while (i <= mid && j < high)
-    {   
+    {
         // printf("%d %d %d\n", i, j, k);
-        
-        if (a[i] < a[j])
+        // printf("-->%d %d\n", a[i], a[j]);
+
+        if (a[i] <= a[j])
         {
             b[k] = a[i];
             k++;
             i++;
-        }
-        else if (a[i] == a[j])
-        {
-            b[k] = a[i];
-            k++;
-            i++;
-            j++;
         }
         else if (a[i] > a[j])
         {
             b[k] = a[j];
-            j++;
             k++;
+            j++;
         }
     }
 
     while (i <= mid)
-    {   
+    {
         b[k] = a[i];
         k++;
         i++;
     }
 
     while (j < high)
-    {   
+    {
         // printf("%d %d %d\n", i, j, k);
         b[k] = a[j];
         k++;
         j++;
+    }
+
+    for (int i = 0; i < high; i++)
+    {
+        a[i] = b[i];
     }
 }
 
 int main(int argc, char const *argv[])
 {
     int a[] = {2, 11, 21, 34, 1, 42, 91};
-    int b[] = {};
 
     int size = sizeof(a) / sizeof(a[0]);
     // printf("%d\n", size);
     printArray(a, size);
-    MergeSort(a, b, size);
+    Merge(a, size);
     printf("After Merge Sorting..\n");
-    printArray(b, size);
+    printArray(a, size);
 
     return 0;
 }
