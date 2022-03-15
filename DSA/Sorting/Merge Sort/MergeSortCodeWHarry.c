@@ -55,7 +55,8 @@ void mergeSort(int A[], int low, int high)
     if (low < high)
     {
         mid = (low + high) / 2;
-        mergeSort(A, low, mid);
+        // treess 
+        mergeSort(A, low, mid); 
         mergeSort(A, mid + 1, high);
         merge(A, mid, low, high);
     }
