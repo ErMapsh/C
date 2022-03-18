@@ -19,14 +19,15 @@ struct Node *CreateNode(int data)
 }
 
 // Traversal in Binary tree
-void InOrderDisplay(struct Node *root)
+void PreOrderDisplay(struct Node *root)
 {   
-    // (Left subtree) (Right subtree) (root)
+    //this functions say if given ptr is null do nothing
+    // if not null then print data and go for left and right node 
     if (root != NULL)
     {
-        InOrderDisplay(root->Left);
         printf("%d ", root->data);
-        InOrderDisplay(root->Right);
+        PreOrderDisplay(root->Left);
+        PreOrderDisplay(root->Right);
     }
 }
 
@@ -40,9 +41,9 @@ int main(int argc, char const *argv[])
               / \
               5  2
 
-        InOrder implemention like this:
-        [left subtree] [root] [right subtree] 
-        [5    1     2]    4           6
+        PreOrder implemention like this:
+        [root]  [left subtree] [right subtree] 
+           4    [1     5    2]       6          
     */
     struct Node *A = CreateNode(4);
     struct Node *B = CreateNode(1);
@@ -59,7 +60,7 @@ int main(int argc, char const *argv[])
     B->Right = E;
 
 
-    InOrderDisplay(A);
+    PreOrderDisplay(A);
 
     return 0;
 }

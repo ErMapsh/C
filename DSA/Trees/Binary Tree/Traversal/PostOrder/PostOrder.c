@@ -19,14 +19,14 @@ struct Node *CreateNode(int data)
 }
 
 // Traversal in Binary tree
-void InOrderDisplay(struct Node *root)
+void PostOrderDisplay(struct Node *root)
 {   
     // (Left subtree) (Right subtree) (root)
     if (root != NULL)
     {
-        InOrderDisplay(root->Left);
+        PostOrderDisplay(root->Left);
+        PostOrderDisplay(root->Right);
         printf("%d ", root->data);
-        InOrderDisplay(root->Right);
     }
 }
 
@@ -40,9 +40,9 @@ int main(int argc, char const *argv[])
               / \
               5  2
 
-        InOrder implemention like this:
-        [left subtree] [root] [right subtree] 
-        [5    1     2]    4           6
+        Post order implemention like this:
+        [left subtree] [right subtree] [root]
+        [5     2    1]       6           4
     */
     struct Node *A = CreateNode(4);
     struct Node *B = CreateNode(1);
@@ -59,7 +59,7 @@ int main(int argc, char const *argv[])
     B->Right = E;
 
 
-    InOrderDisplay(A);
+    PostOrderDisplay(A);
 
     return 0;
 }
