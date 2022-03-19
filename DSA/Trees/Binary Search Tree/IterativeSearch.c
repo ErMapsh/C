@@ -30,24 +30,24 @@ void InOrderDisplay(struct Node *root)
     }
 }
 
-struct Node *search(struct Node *root, int key)
+struct Node *IterativeSearch(struct Node *root, int key)
 {
-    if (root == NULL)
+    while (root != NULL)
     {
-        return NULL;
+        if (key == root->data)
+        {
+            return root;
+        }
+        else if (key < root->data)
+        {
+            root = root->Left;
+        }
+        else
+        {
+            root = root->Right;
+        }
     }
-    if (key == root->data)
-    {
-        return root;
-    }
-    else if (key < root->data)
-    {
-        return search(root->Left, key);
-    }
-    else
-    {
-        return search(root->Right, key);
-    }
+    return NULL;
 }
 
 int main(int argc, char const *argv[])
@@ -97,14 +97,13 @@ int main(int argc, char const *argv[])
     InOrderDisplay(A);
     printf("\n");
 
-    struct Node *n = search(A, 8);
-    if (n != NULL)
-    {
-        printf("Key in Tree is %d", n->data);
+
+    struct Node* n = IterativeSearch(A, 14);
+    if(n!=NULL){
+    printf("Found: %d", n->data);
     }
-    else
-    {
-        printf("Key in Not Tree");
+    else{
+        printf("Element not found");
     }
     return 0;
 }
