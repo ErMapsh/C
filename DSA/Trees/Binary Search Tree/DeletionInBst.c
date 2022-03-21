@@ -30,39 +30,56 @@ void InOrderDisplay(struct Node *root)
     }
 }
 
-void Insertion(struct Node * root, int key){
-    struct Node * prev = NULL;
-    while (root != NULL)
-    {   
-        prev = root;
-        if (root->data == key)
-        {
-            printf("You Cannot insert duplicate..\n");
-            return;
-        }else if (key < root->data)
-        {
-            root = root->Left;
-        }else{
-            root = root->Right;
-        }
+struct Node *inOrderPredecessor(struct Node *root){
+    root = root->Left;
+    while (root->Right != NULL)
+    {
+        root = root->Right;
+    }
+    return root;
+    
+}
+struct Node *Deletion(struct Node *root, int key)
+{   
+    struct Node *inPre;
+
+    if(root == NULL){
+        return NULL;
     }
 
-    struct Node *nnode = CreateNode(10);
-    if (nnode->data < prev->data)
+    if (root->Left == NULL && root->Right == NULL)
     {
-        prev->Left = nnode;
-    }else{
-        prev->Right = nnode;
+        free(root);
+        return NULL;
     }
-    printf("%d %d %d\n", prev->Left->data, prev->data, prev->Right->data);
+    
+    // search for the node to be deleted
+    if (key < root->data)
+    {
+        return Deletion(root->Left, key);
+    }
+    else if (key > root->data)
+    {
+        return Deletion(root->Right, key);
+    }
+    //deletion statergy when the node found
+    else
+    {
+        inPre = inOrderPredecessor(root);
+        root->data = inPre->data;
+        root->Left = Deletion(root->Left, inPre->data);
+
+    }
+
+    return root;
 }
 
 int main(int argc, char const *argv[])
 {
     /*
         Tree seen like this
-                9
-               / \
+                 9
+                / \
                4  11
               / \   \
              2   7   15
@@ -103,7 +120,7 @@ int main(int argc, char const *argv[])
 
     InOrderDisplay(A);
     printf("\n");
-    Insertion(A, 10);
+    Deletion(A, 7);
     InOrderDisplay(A);
     return 0;
 }
