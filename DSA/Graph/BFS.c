@@ -92,8 +92,9 @@ int main(int argc, char const *argv[])
     int node;
     int i = 0;
     int visited[7] = {0, 0, 0, 0, 0, 0, 0};
+    // multi dimensional array represented a graph
     int a[7][7] = {
-        {0, 1, 1, 1, 0, 0, 0},  
+        {0, 1, 1, 1, 0, 0, 0},
         {1, 0, 0, 1, 0, 0, 0},
         {1, 1, 0, 1, 1, 0, 0},
         {1, 0, 1, 0, 1, 0, 0},
@@ -101,17 +102,17 @@ int main(int argc, char const *argv[])
         {0, 0, 0, 0, 1, 0, 0},
         {0, 0, 0, 0, 1, 0, 0}};
 
-    printf("%d", visited[i]);
-    visited[i] = 1;
-    enqueue(q, i); // enqueue i for exploration
+    printf("%d", i); // need to print source node.
+    visited[i] = 1;  // so now i is visited. so 0 element is visited
+    enqueue(q, i);   // enqueue i for exploration.  
 
     while (!isEmpty(q))
     {
-        node = dequeue(q);
+        node = dequeue(q);//getting dequeue element from exploration queue
         // printf("node is %d\n", node);
         for (int j = 0; j < 7; j++)
         {
-            if (a[node][j] == 1 && visited[j] == 0)
+            if (a[node][j] == 1 && visited[j] == 0)// if another node is connected and 
             {
                 printf("%d", j);
                 visited[j] = 1;
