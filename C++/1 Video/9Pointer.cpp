@@ -11,6 +11,6 @@ int main(int argc, char const *argv[])
     cout << "value of a is " << a << endl;            // directly
     cout << "value of a is " << *ptra << endl;        // dereferencing pointer
     cout << "Address value of a is " << &a << endl;   // using ampersand operator
-    cout << "Address value of a is " << ptra << endl; // store value in ptra
+    cout << "Address value of a is " << ptra << endl; // store address value in ptra
     return 0;
 }
