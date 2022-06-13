@@ -10,11 +10,12 @@ int main(int argc, char const *argv[])
     int RightElement = arr[n - 1];
     for (int i = 1; i < n - 1; i++)
     {
-        if(arr[i] > maxNo){
+        if (arr[i] > maxNo)
+        {
             maxNo = arr[i];
         }
     }
-    cout << "The sum of leaders is "<< maxNo + RightElement <<endl;
+    cout << "The sum of leaders is " << maxNo + RightElement << endl;
 
     return 0;
 }
