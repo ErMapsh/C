@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// class i c
+// class in c++
 class Employee
 {
 private:
@@ -22,14 +22,6 @@ public:
     }
 };
 
-// :: is a part of Emplyee class
-void Employee ::setData(int a1, int b1, int c1)
-{
-    a = a1;
-    b = b1;
-    c = c1;
-}
-
 int main()
 {
     Employee harry;
@@ -39,4 +31,12 @@ int main()
     harry.setData(1, 2, 4);
     harry.getData();
     return 0;
+}
+
+// :: is saying this function is part of Emplyee class
+void Employee ::setData(int a1, int b1, int c1)
+{
+    a = a1;
+    b = b1;
+    c = c1;
 }
