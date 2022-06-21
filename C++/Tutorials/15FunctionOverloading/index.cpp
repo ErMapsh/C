@@ -2,7 +2,8 @@
 using namespace std;
 
 /*
-    function overloading is a thing, we can make similar name of function but argument  should be different of all functions.
+    function overloading is a thing, we can make similar name of function but 
+    arguments are different of all functions.
     while function is choosen by function calling via argument
 */ 
 
