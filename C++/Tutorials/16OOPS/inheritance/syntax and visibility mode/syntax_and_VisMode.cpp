@@ -41,7 +41,7 @@ Notes:
 3. Private Visibility Mode: Public member of the based class become Private members of derived class.
 */
 
-class Programmer : Employe
+class Programmer : public Employe
 {
 private:
     int ProgrammingLanguagesKnown;
@@ -86,6 +86,7 @@ int main(int argc, char const *argv[])
     p2.LanguageKnow();
     p2.showAllLang();
 
-    // p2.setData(73, 200000);
+    p2.setData(73, 200000); // we can't setup private members value of base class from derived class if we set inheritance is private.
+    p2.Display();
     return 0;
 }
