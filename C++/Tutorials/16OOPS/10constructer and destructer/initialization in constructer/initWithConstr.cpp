@@ -14,6 +14,8 @@ class Test
     int b;
 
 public:
+    // Test(int i, int j) : a(i), b(j*a)
+    // Test(int i, int j) : a(i), b(j+a)
     Test(int i, int j) : a(i), b(j)
     {
         cout << "Constructor executed" << endl;
