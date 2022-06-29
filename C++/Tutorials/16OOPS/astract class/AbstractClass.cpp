@@ -4,6 +4,10 @@ using namespace std;
 
 class CWH
 {
+    /*
+        abstarct class not reccomended to create a object directly of his own class, but u can inherited it and after that u can use that say.
+        we can say CWH is abstarct class, and abstract class must have atleast min 1 virtual fucntion
+    */
 protected:
     string title;
     float rating;

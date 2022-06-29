@@ -14,7 +14,10 @@ public:
         title = s;
         rating = r;
     }
-    virtual void display() {} // base class object pointer ko jis derived class object ka addaress assign kiya huva hai, us derived class ka  display() function call krva do.
+    virtual void display() = 0; // do-nothing function --> pure virtual function.
+    /*
+        saying every derived class must have his own display function.
+    */ 
 };
 
 class CWHVideo : public CWH
