@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+// basic syntax of template
 template <class T>
 class vector
 {
@@ -8,9 +9,10 @@ class vector
     int size;
 
 public:
-    vector(){}
+    vector() {}
 
-    vector(T *x){
+    vector(T *x)
+    {
         // steps
     }
     // and many other methods
