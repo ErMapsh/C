@@ -50,15 +50,15 @@ int main(int argc, char const *argv[])
     float a = v1.DotProduct(v2);
     cout << a << endl;
 
-    /* Here we can use , different type of data types for one single class, this is best thing
+    
+    /* Here we can use different type of data types for one single class, this is best thing
     in template*/
-
-    Vector<double> v3(3); // vector 1 with a float data type
+    Vector<double> v3(3); // vector 1 with a double data type
     v3.arr[0] = 1.4;
     v3.arr[1] = 3.3;
     v3.arr[2] = 0.1;
 
-    Vector<double> v4(3); // vector 2 with a float data type
+    Vector<double> v4(3); // vector 2 with a double data type
     v4.arr[0] = 0.1;
     v4.arr[1] = 1.90;
     v4.arr[2] = 4.1;
