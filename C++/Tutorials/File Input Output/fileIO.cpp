@@ -2,7 +2,9 @@
 #include <fstream>
 using namespace std;
 
-/*
+/*  
+    in this tutorial, i gona work with file name sample1.txt
+    
     while working with file in c++, we need a header file "fstream".
     fstream header file having classes for reading or writing operation.
 
@@ -23,13 +25,15 @@ int main(int argc, char const *argv[])
     string s1 = "in these file, there are data of file name sample1.txt";
     ofstream out("sample1.txt"); // ofstream is a class-->output-fstream
     out<<s1;// out object main string insert krdo, insertion operater se
+    out.close();
 
     // opening file using constructer and perform read operation
     string s2;
-    ifstream in("sample2.txt"); // all data comming in in object;
+    ifstream in("sample1.txt"); // all data comming in in object;
     in>>s2; 
     cout<<s2;
     getline(in, s2);
     cout<<s2;
+    in.close();
     return 0;
 }

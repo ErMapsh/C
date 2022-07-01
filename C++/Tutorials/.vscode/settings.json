@@ -7,6 +7,7 @@
         "random": "cpp",
         "algorithm": "cpp",
         "cmath": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "iosfwd": "cpp"
     }
 }
