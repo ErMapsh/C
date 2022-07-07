@@ -33,14 +33,18 @@ int main(int argc, char const *argv[])
 
     int u_size = 5, t_size = 100, at_index = 3, element = 55;
     showDisplay(arr, u_size);
+
+    // ---inserting element----
     int data = SortedInsertion(arr, t_size, u_size, element, at_index); // adding one element here
     // printf("%d\n", data);
-    if (data == 1)//if insertion function return 1 means operation success then show updated array 
-    {   
+    if (data == 1) // if insertion function return 1 means operation success then show updated array
+    {
         printf("Insertion Successfull.........\n");
         u_size += 1;
         showDisplay(arr, u_size);
-    }else{
+    }
+    else
+    {
         printf("Insertion fail..\n");
     }
 

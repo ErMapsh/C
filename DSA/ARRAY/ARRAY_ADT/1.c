@@ -2,16 +2,14 @@
 #include <stdlib.h>
 
 // this is ADT: abstract data type
-struct MyArray
-{
+struct MyArray{
     // this is only information
     int total_size;
     int used_size;
     int *ptr;
 };
 
-void CreateArray(struct MyArray *StructPointer, int tSize, int uSize)
-{
+void CreateArray(struct MyArray *StructPointer, int tSize, int uSize){
     /* 
      printf("%d", (*StructPointer)); // this is base address of our array or structure
      (*StructPointer).total_size = tSize;
@@ -21,10 +19,9 @@ void CreateArray(struct MyArray *StructPointer, int tSize, int uSize)
     StructPointer->total_size = tSize;
     StructPointer->used_size = uSize;
     StructPointer->ptr = (int *)malloc(StructPointer->total_size * sizeof(int)); // here create array in heap
-}
+};
 
-void SetValue(struct MyArray *stuctPtr)
-{
+void SetValue(struct MyArray *stuctPtr){
     int n;
     for (int i = 0; i < stuctPtr->used_size; i++)
     {
@@ -32,10 +29,9 @@ void SetValue(struct MyArray *stuctPtr)
         scanf("%d", &n);
         (stuctPtr->ptr)[i] = n;
     }
-}
+};
 
-void Show(struct MyArray *stuctPtr)
-{
+void Show(struct MyArray *stuctPtr){
     for (int i = 0; i < stuctPtr->used_size; i++)
     {
         printf("%d\n", (stuctPtr->ptr)[i]);
