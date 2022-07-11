@@ -40,6 +40,12 @@ void Display(Array *arr)
 
 int InsetionWithMaintainOrder(Array *arr)
 {
+
+    if (arr->Use >= arr->ArrSize)
+    {
+        return -1;
+    }
+
     int index, data;
     printf("Enter the value That You want to insert: ");
     scanf("%d", &data);
@@ -47,12 +53,12 @@ int InsetionWithMaintainOrder(Array *arr)
     scanf("%d", &index);
     // printf("%d", arr->Use);
 
-    for (int i = arr->Use; index <= i; i--)
+    for (int i = arr->Use - 1; i >= index; i--)
     {
         arr->arr[i + 1] = arr->arr[i];
     }
-    arr->arr[index] = data;
     arr->Use++;
+    arr->arr[index] = data;
     return 1;
 }
 
