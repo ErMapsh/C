@@ -23,6 +23,17 @@ int isFull(struct Node *top, int stackSize)
 {
 
     int i = 0;
+    /*
+        here we use the logic is diff than other, 
+        we doing insertion and deletion of node at the head node beacause of every operation perform in order of 1
+        so we need to calculate how many elements in stack, so top pointer denoting the stack top element 
+        or can be null.  
+
+        if top is not null then go for next element 
+        is happend upto we dont get top pointer as null, while doing this task we also measure how elemnt 
+        in stack.
+
+    */
     while (top != NULL)
     {
         top = top->next;
@@ -64,7 +75,7 @@ struct Node *Pop(struct Node *top)
 {
     if (isEmpty(top))
     {
-        printf("Stack is Empty u cant pop item..\n");
+        printf("Stack is Empty u can't pop item..\n");
         return top;
     }
     else

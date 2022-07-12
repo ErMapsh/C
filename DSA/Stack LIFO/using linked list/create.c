@@ -8,7 +8,6 @@ struct Node
 
 int isEmpty(struct Node *top)
 {
-
     if (top == NULL)
     {
         return 1;
