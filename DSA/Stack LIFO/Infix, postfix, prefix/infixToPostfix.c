@@ -57,19 +57,17 @@ char Pop(struct stack *ptr)
         // printf("Stack is Empty\n\n");
     }
     else
-    {   
+    {
         char ch = ptr->arr[ptr->top];
         ptr->top--;
         return ch;
     }
-
 }
 
 char stackTop(struct stack *ptr)
 {
     return ptr->arr[ptr->top];
 }
-
 
 int IsOperator(char a)
 {
@@ -103,21 +101,21 @@ char *intoPostfix(char *infixExp)
     struct stack *sp = (struct stack *)malloc(sizeof(struct stack)); // allocating space
     sp->top = -1;
     sp->size = 100;
-    sp->arr = (char *)malloc( sp->size * sizeof(char)); // allcating stack space for stack
+    sp->arr = (char *)malloc(sp->size * sizeof(char)); // allcating stack space for stack
 
-    char *Postfix = (char *) malloc((strlen(infixExp) + 1) * sizeof(char)); // char array for storing postfix
+    char *Postfix = (char *)malloc((strlen(infixExp) + 1) * sizeof(char)); // char array for storing postfix
     int j = 0;
     int i = 0;
 
-    while(infixExp[i] != '\0') // getting all char one by one
+    while (infixExp[i] != '\0') // getting all char one by one
     {
         if (IsOperator(infixExp[i]))
-        { /*
-          if char is operator, that time need to
-          compare top element precedance and current character
-          */
+        {
             if (Precedance(infixExp[i]) > Precedance(stackTop(sp)))
-            {
+            { /*
+              if char is operator, that time need to
+              compare top element precedance and current character
+              */
                 push(sp, infixExp[i]);
                 i++;
             }
@@ -134,6 +132,7 @@ char *intoPostfix(char *infixExp)
             i++;
         }
     }
+
     while (!isEmpty(sp))
     {
         Postfix[j] = Pop(sp);

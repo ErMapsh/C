@@ -85,6 +85,7 @@ int MatchChar(char a, char b)
         return 0;
     }
 }
+
 int ParenthesisMatch(char *exp)
 {
     // create and initialise a stack
