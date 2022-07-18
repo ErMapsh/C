@@ -83,6 +83,7 @@ void Transversal(struct Queue *q)
         printf("\n");
     }
 }
+
 int main(int argc, char const *argv[])
 {
 
