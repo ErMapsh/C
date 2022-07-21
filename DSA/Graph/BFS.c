@@ -114,7 +114,7 @@ int main(int argc, char const *argv[])
         {
             if (a[node][j] == 1 && visited[j] == 0)// if another node is connected and 
             {
-                printf("%d", j);
+                printf("%d ", j);
                 visited[j] = 1;
                 enqueue(q, j);
             }
