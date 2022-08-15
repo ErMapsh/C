@@ -92,9 +92,9 @@ int peedValue(struct stack *ptr, int index)
         if (ptr->size - 1 >= index)
         {
 
-            if (index <= ptr->top)
+            if (ptr->top >=  index)
             {
-                printf("Element is %d at index no %d\n\n", ptr->arr[index], index);
+                printf("Element is %d at index no %d\n", ptr->arr[index], index);
                 return 1;
             }
             else

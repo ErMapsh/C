@@ -6,7 +6,7 @@ int BinarySearch(int arr[], int size, int element)
     low = 0;
     high = size - 1;
     if (element == arr[low])
-    {
+    {   
         return 0;
     }
     else if (element == arr[high])
@@ -53,7 +53,9 @@ int main(int argc, char const *argv[])
 
     printf("Enter Element That u want to search: ");
     scanf("%d", &element);
+    
     int result = BinarySearch(arr, size, element);
+
     if (result != -1)
     {
         printf("we got element at index no %d\n", result);

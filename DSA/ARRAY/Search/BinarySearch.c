@@ -4,12 +4,13 @@
 int main(int argc, char const *argv[])
 {
     /*
-        array must be sorted in binary search,
-        we need to maintain low, mid, high  in binary search.
+        array sorted in binary search,
+        we need low, mid, high var in binary search.
     */
 
     int arr[10] = {2, 4, 7, 9, 12, 15, 26, 38, 44, 51};
     int low, mid, high, element = 44, size;
+    printf("The size of array is %d\n", sizeof(arr)/sizeof(arr[0]));
     size = sizeof(arr) / sizeof(arr[0]);
     low = 0;
     high = size - 1;

@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct stack
+typedef struct stack
 {
     int size;
     int top;
     int *arr;
-};
+} st;
 
 int isEmpty(struct stack *ptr)
 {
