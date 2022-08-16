@@ -60,7 +60,7 @@ int Delete(struct Queue *q)
     }
     else
     {
-        for (int i = q->front; i < q->rear; i++)
+        for (int i = q->front; i < q->rear-1; i++)
         {
             q->arr[i] = q->arr[i + 1];
         }

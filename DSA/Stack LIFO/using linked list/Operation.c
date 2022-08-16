@@ -87,7 +87,7 @@ struct Node *Pop(struct Node *top)
     }
 }
 
-void *Display(struct Node *top)
+void Display(struct Node *top)
 {
     if (isEmpty(top))
     {

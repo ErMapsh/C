@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct Node
+
+typedef struct Node
 {
     int data;
     struct Node *next;
-};
+} SN;
 
 int isEmpty(struct Node *top)
 {
@@ -16,11 +17,10 @@ int isEmpty(struct Node *top)
     {
         return 0;
     }
-}
+};
 
 int isFull(struct Node *top, int stackSize)
 {
-
     int i = 0;
     while (top != NULL)
     {
@@ -36,7 +36,8 @@ int isFull(struct Node *top, int stackSize)
     {
         return 0;
     }
-}
+};
+
 int main(int argc, char const *argv[])
 {
     /*
@@ -60,7 +61,7 @@ int main(int argc, char const *argv[])
     }
     else
     {
-        printf("You Can Insert\n");
+        printf("Attension--->You Can Insert\n");
     }
     return 0;
 }
