@@ -3,7 +3,7 @@
 using namespace std;
 
 /*  
-    in this tutorial, i gona work with file name sample1.txt
+    in this tutorial, i gonna work with file name sample1.txt
     
     while working with file in c++, we need a header file "fstream".
     fstream header file having classes for reading or writing operation.

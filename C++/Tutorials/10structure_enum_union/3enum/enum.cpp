@@ -5,9 +5,9 @@ int main(int argc, char const *argv[])
 {
     enum Meal
     {
-        breakfast,
-        lunch,
-        dinner
+        breakfast,//-> consider as 0
+        lunch,//-> consider as 1
+        dinner//-> consider as 2
     };
 
     Meal m1 = breakfast;
@@ -19,8 +19,5 @@ int main(int argc, char const *argv[])
     Meal m3 = dinner;
     cout<<m3<<endl;
 
-    // cout << breakfast << endl;
-    // cout << lunch << endl;
-    // cout << dinner << endl;
     return 0;
 }

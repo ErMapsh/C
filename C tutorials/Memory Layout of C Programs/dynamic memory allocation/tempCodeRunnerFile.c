@@ -1,1 +1,0 @@
-(int *)calloc(n , sizeof(int));

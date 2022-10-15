@@ -2,9 +2,10 @@
 using namespace std;
 
 /*
-    Default arguments are those values which are used by the function if we don’t input our value. It is recommended to write default arguments after the other arguments.
+    Default arguments are those values which are used by the function if we don’t want to pass our value. It is recommended to write default arguments after the other arguments.
     there is main goal.
 */
+
 float moneyReceived(int currentMoney, float factor = 1.04)
 {
     return currentMoney * factor;

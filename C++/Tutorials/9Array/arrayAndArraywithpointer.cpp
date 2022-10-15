@@ -18,7 +18,7 @@ int main(){
     cout<<mathMarks[3]<<endl;
 
     // You can change the value of an array
-    marks[2] = 455;
+    marks[3] = 455;
     cout<<"These are marks"<<endl;
     // cout<<marks[0]<<endl;
     // cout<<marks[1]<<endl;
@@ -30,12 +30,14 @@ int main(){
         cout<<"The value of marks "<<i<<" is "<<marks[i]<<endl;
     }
 
-    // Quick quiz: do the same using while and do-while loops?
 
+    printf("\n");
+    // Quick quiz: do the same using while and do-while loops?
+    
     // Pointers and arrays
     int* p = marks;
     cout<<*(p++)<<endl; 
-    cout<<*(++p)<<endl;
+    cout<<*(++p)<<endl; // second index of marks[2]
     // cout<<"The value of *p is "<<*p<<endl;
     // cout<<"The value of *(p+1) is "<<*(p+1)<<endl;
     // cout<<"The value of *(p+2) is "<<*(p+2)<<endl;

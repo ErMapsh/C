@@ -3,7 +3,7 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
-    /* when sometime  we dont want to change var value that time we can use constant
+    /* when sometimes we dont want to change var value that time we can use constant
     for that varibale 
     ie. const float pie = 3.17;
     */

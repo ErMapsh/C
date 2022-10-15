@@ -8,7 +8,8 @@ int main(int argc, char const *argv[])
     float a = 34.5;
     double b = 33424.23424;
     int c = 4;
-
+    
+    // there are two way to typecasting
     cout << "The value of a is " << a << endl;
     cout << "The value of a is " << int(a) << endl;
     cout << "The value of a is " << (int)a << endl;
