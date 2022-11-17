@@ -7,12 +7,12 @@
 - building a exe file (gcc file.c -o "exe filename")[]
 
 ## Commands used  for installation
-- Update the package database and base packages using
+- Update the package database and base packages using Open terminal
 ```
 pacman -Syu
 ```
 
-- Update rest of the base packages 
+- Update rest of the base packages using MSYS
 ```
 pacman -Su
 ```
