@@ -8,17 +8,19 @@ int main()
                            {4, 1, 73, 123}}; // Two dimensional array
 
     // one dimensional array
+    printf("\n-----1D array-----\n");
     for (int i = 0; i < 5; i++)
     {
-        printf("Number in array is %d\n", array[i]);
+        printf("array[%d] is %d\n", i, array[i]);
     }
 
     // Two dimensional array
+    printf("\n-----2D array-----\n");
     for (int i = 0; i < 2; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            printf("Value in TwoDArray[%d][%d] is %d\n", i, j, TwoDArray[i][j]);
+            printf("TwoDArray[%d][%d] is %d\n", i, j, TwoDArray[i][j]);
         }
     }
 

@@ -25,8 +25,9 @@ int main()
     ptr->getData();
 
     // Array of Objects
-    Complex *ptr1 = new Complex[4];
-    ptr1->setData(1, 4);
+    Complex *ptr1 = new Complex[4]; // its make confusion here, so lets move on 20 file, currently ptr1 at 0 and setting up data of it 
+    ptr1 ->setData(1, 4); 
     ptr1->getData();
+   
     return 0;
 }

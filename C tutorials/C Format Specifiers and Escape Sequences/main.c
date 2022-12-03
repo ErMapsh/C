@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define PI 3.14
+#define PI 3.14 // here we can define preprcessor like for default value
 
 int main(int argc, char const *argv[])
 {   

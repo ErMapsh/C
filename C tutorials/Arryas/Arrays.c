@@ -29,7 +29,6 @@ Any element of the array with given index can be accessed very quickly by using 
 Index No. – It is the special type of no. which allows us to access variables of Arrays i.e. index no. provides a method to access each element of an array in a program.
 
 
-
 Syntax:
 Data_type name[size];
 
@@ -40,7 +39,7 @@ Data_type name[size];
 int main()
 {
 	//---One dimensional array---
-	int marks[10], sum = 0; // array size become 40 beacause int size is 4 and array having same datatypes
+	int marks[10], sum = 0; // array size become 40m beacause int size is 4 and array having same datatypes
 
 	// ---lenght of array---
 	int length = sizeof(marks) / 4; // In each int element having a 4 bytes, we need number of item in array so its return 10 beacause int having 4 bytes size and 4*10 blocks in array is 40

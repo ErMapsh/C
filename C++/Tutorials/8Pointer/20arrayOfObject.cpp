@@ -24,15 +24,17 @@ int main()
     int size = 3;
     ShopItem *ptr = new ShopItem[size];
     ShopItem *ptrTemp = ptr;
+
     int p, i;
     float q;
+
     for (i = 0; i < size; i++)
     {
         cout << "Enter Id and price of item " << i + 1 << endl;
         cin >> p >> q;
         // (*ptr).setData(p, q);
         ptr->setData(p, q);
-        ptr++;
+        ptr++; // ab ptr last index tk aa gya hai, so we just created ptrTemp
     }
 
     for (i = 0; i < size; i++)

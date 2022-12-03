@@ -2,7 +2,7 @@
 
 int main(int argc, char const *argv[])
 {
-    // printf("The value of argc is %d", argc); //The first argument of main is the filename of that file
+    printf("----The value of argc is %d-----\n", argc); //The first argument of main is the filename of that file
 
     for (int i = 0; i < argc; i++)
     {

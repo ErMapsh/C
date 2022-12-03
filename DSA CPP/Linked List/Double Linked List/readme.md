@@ -1,0 +1,1 @@
+- same operation for deletion and insertion for doubly linked list.

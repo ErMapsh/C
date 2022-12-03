@@ -4,4 +4,4 @@ ampersand & ----> address of variable
 star * ---->  dereference operator
 
 ## Pointer to Pointer
-- here there is pointer store a var address.
+- here there is pointer store's var address.
