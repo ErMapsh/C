@@ -17,6 +17,6 @@ int main()
     ptr = &a;
     // printf("The address of a is %p\n", ptr);
     printf("The value of a is %d\n", *ptr);
-
+    printf("%d", ((void *)0));
     return 0;
 }

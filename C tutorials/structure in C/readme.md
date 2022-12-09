@@ -3,7 +3,7 @@
 - structures are user defined data types in C.
 - using structures allows us to combine data of different types together.
 - it used to create complex data type which containes diverse info.
-- they are very similar to array but structure can sotre data of any type, which is practically more useful.
+- they are very similar to array but structure can store data of any type, which is practically more useful.
 
 # Defining a structure
 

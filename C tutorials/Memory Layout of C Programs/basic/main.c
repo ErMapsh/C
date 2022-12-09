@@ -2,7 +2,7 @@
 int main()
 {
     // here we using a size cmd for see data
-    // gcc .\main.c; size ./a.exe
+    // gcc .\main.c; size ./main.exe
 
     // and we got this
 
