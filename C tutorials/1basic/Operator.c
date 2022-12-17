@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
     printf("a - b: %d\n", a - b);
     printf("a / b: %d\n", a / b);
     printf("a * b: %d\n", a * b);
-    printf("a % b: %d\n\n", a % b);
+    printf("a %% b: %d\n\n", a % b);
 
     //---Relational operator---> return true or false, here true is 1 and false is 0.
     printf("a == b: %d\n", a == b);
