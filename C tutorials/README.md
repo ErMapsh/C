@@ -39,9 +39,9 @@ pacman -S mingw-w64-i686-gdb
 ```
 
 # To check Path
-1. gcc version : gcc --version
-2. g++ version : g++ --version
-3. gdb version : gdb --version
+1. gcc --version
+2. g++ --version
+3. gdb --version
 
 
 ## Snippets for C:
