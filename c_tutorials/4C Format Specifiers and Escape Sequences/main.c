@@ -2,7 +2,7 @@
 #define PI 3.14 // here we can define preprcessor like for default value
 
 int main(int argc, char const *argv[])
-{   
+{
     // ---------------formating ---------------
     float a = 3.333;
     int b = 23;
@@ -14,14 +14,12 @@ int main(int argc, char const *argv[])
     // Num = 2;//we can't change cause is begin constant
     printf("%d\n", Num);
 
-
     // ---------------Preprocessor defining: we cant change const after Defining---------------
     printf("%f\n\n", PI);
-
 
     // ---------------Escape Sequence in C---------------
     printf("My blackslash is \\n\n");
     printf("My tab is \\t \t in sentence \a\n");
-    printf("My alarm is \a ");
+    printf("My alarm is \a \v vertical ");
     return 0;
 }

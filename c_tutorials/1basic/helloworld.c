@@ -3,7 +3,7 @@
 int main()
 {
     int a;
-    printf("Hello World!!!");
+    printf("Welcome to Globalspace");
     scanf("%d", &a);
     printf("%d", a);
     return 0;
