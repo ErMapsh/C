@@ -5,15 +5,16 @@ int main(int argc, char const *argv[])
 {
     int a;
     float b;
-    cout<<"Enter The Number:"<<endl;
-    cin>>a;
+    cout << "Enter The Number:";
+    cin >> a;
 
-    cout<<"Enter The Number:"<<endl;
-    cin>>b;
+    cout << "Enter The Number:";
+    cin >> b;
 
-    //arithmetic operators
-    cout<<"a+b of Two Number:"<<a+b<<endl;
-    cout<<"a-b of Two Number:"<<a-b<<endl;
-    cout<<"a*b of Two Number:"<<a*b<<endl;
-    cout<<"a/b of Two Number:"<<a/b<<endl;
+    cout << endl;
+    // arithmetic operators
+    cout << "a+b of Two Number:" << a + b << endl;
+    cout << "a-b of Two Number:" << a - b << endl;
+    cout << "a*b of Two Number:" << a * b << endl;
+    cout << "a/b of Two Number:" << a / b << endl;
 }

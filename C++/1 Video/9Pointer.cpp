@@ -4,7 +4,7 @@ using namespace std;
 int main(int argc, char const *argv[])
 {
     int a = 34;
-    int *ptra;
+    int *ptra; // saying this is pointer that only takes address
     ptra = &a;
     cout << ptra << endl; // value print in hex of a
 
