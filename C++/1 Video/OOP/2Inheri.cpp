@@ -8,7 +8,7 @@ public:
     string name;
     int salary;
 
-    // creating a constructer
+    // Creating a constructor
     Employe(string n, int s, int sp)
     {
         this->name = n;
@@ -16,16 +16,16 @@ public:
         this->secretPassword = sp;
     }
 
-    // creating details of employee
+    // Creating details of employee
     void printDetails()
     {
         cout << "The Name of Employe is " << this->name << " and his salary is " << this->salary << "$" << endl;
     }
 
-    // to get employe password
+    // To get employee password
     void getSecretPasswordOfEmploy()
     {
-        cout << "the password is " << this->secretPassword;
+        cout << "The password is " << this->secretPassword << endl;
     }
 
 private:
@@ -36,12 +36,20 @@ class Programmer : public Employe
 {
 public:
     int Error = 10;
+
+    // Constructor explicitly calling base class constructor
+    Programmer(string n, int s, int sp) : Employe(n, s, sp) {}
+
+    void print()
+    {
+        cout << "Programmer Name: " << this->name << endl;
+    }
 };
 
-int main(int argc, char const *argv[])
+int main()
 {
-    // Employe ErMapsh("ErMapsh", 1444, 32156);
-    // ErMapsh.printDetails();
+    Programmer p("ErMapsh", 1444, 32156);
+    p.print();
 
     return 0;
 }

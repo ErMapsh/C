@@ -4,6 +4,7 @@ using namespace std;
 // class - is teplate or blueprint
 class Employe
 {
+
 public:
     string name;
     int salary;
@@ -23,11 +24,17 @@ public:
 
     void getSecretPasswordOfEmploy()
     {
-        cout << "the password is " << this->secretPassword;
+        cout << "the password is " << this->secretPassword << endl;
+        this->getPrivateFun();
     }
 
 private:
     int secretPassword;
+
+    void getPrivateFun()
+    {
+        cout << "this function not accessble direclty but can though public method" << endl;
+    }
 };
 
 int main(int argc, char const *argv[])
@@ -37,7 +44,9 @@ int main(int argc, char const *argv[])
     // hr.salary = 10000;
     // cout<<"The Name of Employe"<<hr.name<<"and his salary is "<<hr.salary<<"$"<<endl;
     hr.printDetails();
+    cout << hr.name << endl;
     // cout << hr.secretPassword << endl; // we cant get private variable directly but class funtion can be
     hr.getSecretPasswordOfEmploy();
+    // hr.getPrivateFun(); //
     return 0;
 };
