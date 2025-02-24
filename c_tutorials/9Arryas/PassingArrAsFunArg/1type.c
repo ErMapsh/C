@@ -12,8 +12,8 @@ int main()
 }
 
 int sum(int arr[])
-{  
-     // if u change the value of array, it gets reflected in main function.
+{
+    // if u change the value of array, it gets reflected in main function.
     // means overall u cant change array value;
     int sum_of_array = 0;
     for (int i = 0; i < 4; ++i)
