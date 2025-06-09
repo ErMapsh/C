@@ -1,5 +1,6 @@
-#include<stdio.h>
+#include <stdio.h>
 void display();
+void printArray();
 
 // 2.using pointer we can access element
 int main()
@@ -9,10 +10,19 @@ int main()
     {
         display(&arr[i]);
     }
-        return 0;
+    printArray(arr);
+    return 0;
 }
 
 void display(int *ptr)
 {
     printf("%d\n", *(ptr));
+}
+
+void printArray(int *arr)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        display(&arr[i]);
+    }
 }

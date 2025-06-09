@@ -4,14 +4,11 @@ Items are stored at contiguous memory locations in Arrays.
 It can also store the collection of derived data types such as pointers, structures etc.
 The C Language places no limits on the number of dimensions in an array i.e. we can create any no. of dimension array E.g. 2d array, 3d array etc.
 
-
 ##Most Commonly used dimensions of Array :
 A one-dimensional array is like a list.
 A two-dimensional array is like a table.
 
-
 Some texts refer to one-dimensional arrays as vectors and two-dimensional arrays as matrices and use the general term Arrays when the no. of dimensions is unspecified or unimportant.
-
 
 ##Why do we need Arrays ?
 Code that use arrays for managing large no. of same type variables is more organized and readable.
@@ -42,8 +39,8 @@ int main()
 	int marks[10], sum = 0; // array size become 40m beacause int size is 4 and array having same datatypes
 
 	// ---lenght of array---
-	int length = sizeof(marks) / 4; // In each int element having a 4 bytes, we need number of item in array so its return 10 beacause int having 4 bytes size and 4*10 blocks in array is 40
-	// printf("%d\n",length);//10
+	int length = sizeof(marks) / sizeof(int); // In each int element having a 4 bytes, we need number of item in array so its return 10 beacause int having 4 bytes size and 4*10 blocks in array is 40
+	printf("%d\n", length);					  // 10
 
 	printf("Enter marks of 10 students:\n\n");
 	for (int i = 0; i <= length - 1; i++)

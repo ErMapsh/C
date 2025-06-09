@@ -19,14 +19,13 @@ int main()
     // Using a dereferencing
     printf("The value in array at array[2] is %d.\n", *(arr + 2));
 
-
     // we dont directly increase arr
-    int *ptr = arr;// ptr access fisrt element of address
+    int *ptr = arr; // ptr access first element of address
     printf("%d\n", ptr);
     ptr++;
     printf("%d\n", ptr);
     ptr--;
-    printf("%d\n", ptr); 
+    printf("%d\n", ptr);
 
     free(ptr);
     return 0;
