@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int n;
-    cout << " Enter the number: " << endl;
+    cout << "Enter the number: ";
     cin >> n;
 
     // how many notes required:
@@ -16,59 +16,60 @@ int main()
         if (n >= 1000)
         {
             value = 1000;
-            count = n / 1000;
-            n = n - 1000 * count;
+            // count = n / 1000;
+            // n = n - 1000 * count;
         }
         else if (n >= 500)
         {
             value = 500;
-            count = n / 500;
-            n = n - 500 * count;
+            // count = n / 500;
+            // n = n - 500 * count;
         }
         else if (n >= 200)
         {
             value = 200;
-            count = n / 200;
-            n = n - 200 * count;
+            // count = n / 200;
+            // n = n - 200 * count;
         }
         else if (n >= 100)
         {
             value = 100;
-            count = n / 100;
-            n = n - 100 * count;
+            // count = n / 100;
+            // n = n - 100 * count;
         }
 
         else if (n >= 50)
         {
             value = 50;
-            count = n / 50;
-            n = n - 50 * count;
+            // count = n / 50;
+            // n = n - 50 * count;
         }
         else if (n >= 20)
         {
             value = 20;
-            count = n / 20;
-            n = n - 20 * count;
+            // count = n / 20;
+            // n = n - 20 * count;
         }
         else if (n >= 10)
         {
             value = 10;
-            count = n / 10;
-            n = n - 10 * count;
+            // count = n / 10;
+            // n = n - 10 * count;
         }
         else if (n >= 5)
         {
             value = 5;
-            count = n / 5;
-            n = n - 5 * count;
+            // count = n / 5;
+            // n = n - 5 * count;
         }
         else if (n >= 1)
         {
             value = 1;
-            count = n / 1;
-            n = n - 1 * count;
+            // count = n / 1;
+            // n = n - 1 * count;
         }
-
+        count = n / value;
+        n = n - value * count;
         switch (value)
         {
         case 1000:
