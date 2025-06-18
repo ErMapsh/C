@@ -6,7 +6,6 @@ int main()
     int n;
     cout << "Enter the number: ";
     cin >> n;
-
     // how many notes required:
     int _1000 = 0, _500 = 0, _200 = 0, _100 = 0, _50 = 0, _20 = 0, _10 = 0, _5 = 0, _1 = 0;
 
@@ -70,6 +69,7 @@ int main()
         }
         count = n / value;
         n = n - value * count;
+
         switch (value)
         {
         case 1000:
