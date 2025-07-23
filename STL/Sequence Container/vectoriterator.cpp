@@ -10,6 +10,7 @@ void printVecRev(vector<int>::reverse_iterator a, vector<int>::reverse_iterator 
     }
     cout << endl;
 }
+
 int main(int argc, char const *argv[])
 {
     vector<int> vec = {1, 2, 3, 4};
