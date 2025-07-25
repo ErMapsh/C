@@ -58,5 +58,6 @@ int main(int argc, char const *argv[])
     printVector(insert);
     cout << "insert is empty: " << insert.empty() << endl;
     cout << "iterator: " << *(more.begin()) << " : " << *(more.end() - 1) << endl;
+
     return 0;
 }
